@@ -8,13 +8,13 @@
       :probe-type="3"
       @scroll="contentScroll"
     >
-      <div>
+      <!-- <div>
         <ul>
           <li v-for="(item, index) in $store.state.cartList" :key="index">
             {{ item.count }}
           </li>
         </ul>
-      </div>
+      </div> -->
       <detail-swiper :top-images="topImages" ref="base" />
       <detail-base-info :goods="goods" />
       <detail-shop-info :shop="shop" />
@@ -148,7 +148,7 @@ export default {
       obj.imgURL = this.topImages[0];
       obj.title = this.goods.title;
       obj.desc = this.goods.desc;
-      obj.newPrice = this.goods.nowPrice;
+      obj.newPrice = this.goods.newPrice;
       //添加到Store中
       this.$store.dispatch("addCart", obj);
       // console.log(this.$store);
