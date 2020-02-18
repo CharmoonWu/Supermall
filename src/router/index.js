@@ -8,10 +8,12 @@ const Home = () => import("../components/home/Home.vue");
 const Like = () => import("../components/like/Like.vue");
 const Profile = () => import("../components/profile/Profile.vue");
 const Detail = () => import("../components/detail/Detail.vue");
+const Category = () => import("../components/category/Category.vue");
 
-var routes = [{
-    path: '',
-    redirect: '/home'
+var routes = [
+  {
+    path: "",
+    redirect: "/home"
   },
   {
     path: "/car",
@@ -30,8 +32,12 @@ var routes = [{
     component: Profile
   },
   {
-    path: '/detail/:iid',
+    path: "/detail/:iid",
     component: Detail
+  },
+  {
+    path: "/category",
+    component: Category
   }
 ];
 

@@ -2,65 +2,45 @@
   <div>
     <tar-bar>
       <tar-bar-item path="/home">
-        <img
-          class="img_icon"
-          slot="item_icon"
-          src="../../assets/img/tabbar/home.svg"
-          alt=""
-        />
+        <img class="img_icon" slot="item_icon" src="../../assets/img/tabbar/home.svg" alt />
         <img
           class="img_icon_act"
           src="../../assets/img/tabbar/home_active.svg"
           slot="item_icon_active"
-          alt=""
+          alt
         />
 
         <div slot="character">首页</div>
       </tar-bar-item>
       <tar-bar-item path="/profile">
-        <img
-          class="img_icon"
-          slot="item_icon"
-          src="../../assets/img/tabbar/profile.svg"
-          alt=""
-        />
+        <img class="img_icon" slot="item_icon" src="../../assets/img/tabbar/profile.svg" alt />
         <img
           class="img_icon_act"
           src="../../assets/img/tabbar/profile_active.svg"
           slot="item_icon_active"
-          alt=""
+          alt
         />
 
         <div slot="character">档案</div>
       </tar-bar-item>
-      <tar-bar-item path="/like">
-        <img
-          class="img_icon"
-          slot="item_icon"
-          src="../../assets/img/tabbar/category.svg"
-          alt=""
-        />
+      <tar-bar-item path="/category">
+        <img class="img_icon" slot="item_icon" src="../../assets/img/tabbar/category.svg" alt />
         <img
           class="img_icon_act"
           src="../../assets/img/tabbar/category_active.svg"
           slot="item_icon_active"
-          alt=""
+          alt
         />
 
-        <div slot="character">喜欢</div>
+        <div slot="character">分类</div>
       </tar-bar-item>
       <tar-bar-item path="/car">
-        <img
-          class="img_icon"
-          slot="item_icon"
-          src="../../assets/img/tabbar/shopcart.svg"
-          alt=""
-        />
+        <img class="img_icon" slot="item_icon" src="../../assets/img/tabbar/shopcart.svg" alt />
         <img
           class="img_icon_act"
           src="../../assets/img/tabbar/shopcart_active.svg"
           slot="item_icon_active"
-          alt=""
+          alt
         />
 
         <div slot="character">购物车</div>
