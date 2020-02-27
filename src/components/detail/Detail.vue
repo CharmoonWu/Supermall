@@ -152,6 +152,7 @@ export default {
       //添加到Store中
       this.$store.dispatch("addCart", obj);
       // console.log(this.$store);
+      this.$toast.isshow();
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="goods-item" @click="itemClick">
-    <img :src="goodsItem.show.img" alt="" @load="imageLoad" />
+    <img v-lazy="getImg" alt="" @load="imageLoad" :key="getImg" />
 
     <div class="goods-info">
       <p>{{ goodsItem.title }}</p>
@@ -28,6 +28,11 @@ export default {
     itemClick() {
       this.$router.push("/detail/" + this.goodsItem.iid);
     }
+  },
+  computed: {
+    getImg() {
+      return this.goodsItem.img || this.goodsItem.show.img;
+    }
   }
 };
 </script>
@@ -36,7 +41,6 @@ export default {
 .goods-item {
   padding-bottom: 40px;
   position: relative;
-
   width: 48%;
 }
 

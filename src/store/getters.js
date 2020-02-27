@@ -2,8 +2,9 @@ const getters = {
   cartList(state) {
     return state.cartList;
   },
-  cartCount(state) {
-    return state.cartList.length;
+  cartCount(state, getters) {
+    // return state.cartList.length;
+    return getters.cartList.length
   }
 };
 export default getters;

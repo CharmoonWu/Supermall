@@ -17,6 +17,9 @@
         <div class="item-count right">x {{ ItemInfo.count }}</div>
       </div>
     </div>
+    <div class="car-btn-div">
+      <button class="car-btn" @click="delbtn(ItemInfo.iid)">删除商品</button>
+    </div>
   </div>
 </template>
 
@@ -35,6 +38,10 @@ export default {
   methods: {
     checkedChange() {
       this.ItemInfo.checked = !this.ItemInfo.checked;
+    },
+    delbtn(iid) {
+      // this.$store.commit("delCommodity", iid);
+      this.$store.dispatch("delCommodity", iid);
     }
   },
   filters: {
@@ -105,5 +112,14 @@ export default {
 
 .info-bottom .item-price {
   color: orangered;
+}
+.car-btn-div {
+  display: flex;
+  align-items: center;
+  margin-right: 13px;
+}
+.car-btn {
+  width: 70px;
+  line-height: 30px;
 }
 </style>

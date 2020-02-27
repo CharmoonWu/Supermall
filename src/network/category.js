@@ -1,4 +1,6 @@
-import { request } from "./request";
+import {
+  request
+} from "./request";
 export function getCategory() {
   return request({
     url: "/category"
@@ -13,11 +15,11 @@ export function getSubcategory(maitKey) {
     }
   });
 }
-export function getCategoryDetail(minWallkey, type) {
+export function getCategoryDetail(miniWallkey, type) {
   return request({
     url: "/subcategory/detail",
     params: {
-      minWallkey,
+      miniWallkey,
       type
     }
   });

@@ -13,7 +13,14 @@ const actions = {
       payload.checked = true;
       content.commit("addToCart", payload);
     }
+  },
+  delCommodity(content, payload) {
+    const Valuable = content.state.cartList.find(item => item.iid === payload);
+    if (Valuable !== -1) {
+      content.commit("delValuable", Valuable);
+    }
   }
+
 };
 
 export default actions;

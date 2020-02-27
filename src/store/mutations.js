@@ -5,6 +5,9 @@ const mutations = {
   },
   addToCart(state, payload) {
     state.cartList.push(payload);
+  },
+  delValuable(state, payload) {
+    state.cartList.splice(payload, 1)
   }
 }
 export default mutations
