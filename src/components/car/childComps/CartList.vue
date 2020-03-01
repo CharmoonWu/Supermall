@@ -1,5 +1,5 @@
 <template>
-  <Scroll>
+  <Scroll ref="scroll">
     <!-- <div v-for="(item, index) in CartList" :key="index">
         {{ item.imgURL }}
       </div> -->
@@ -7,6 +7,7 @@
       v-for="item in CartList"
       :key="item.iid"
       :item-info="item"
+      @sucdel="sucdel"
     />
   </Scroll>
 </template>
@@ -29,6 +30,14 @@ export default {
       default() {
         return [];
       }
+    }
+  },
+  updated() {
+    this.$refs.scroll.refresh();
+  },
+  methods: {
+    sucdel() {
+      this.$refs.scroll.refresh();
     }
   }
 };

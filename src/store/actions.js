@@ -15,12 +15,13 @@ const actions = {
     }
   },
   delCommodity(content, payload) {
-    const Valuable = content.state.cartList.find(item => item.iid === payload);
-    if (Valuable !== -1) {
-      content.commit("delValuable", Valuable);
-    }
+    const Valuable = content.state.cartList.some((item, index) => {
+      if (item.iid === payload) return content.commit("delValuable", index);
+    });
+    // if (Valuable !== -1) {
+    //   content.commit("delValuable", Valuable);
+    // }
   }
-
 };
 
 export default actions;

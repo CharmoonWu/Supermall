@@ -6,7 +6,7 @@
       :checked="isSelectAll"
     ></check-button>
     <span>全选</span>
-    <span class="total-price">合计：￥{{ totalPrice }}</span>
+    <span class="total-price">合计：￥{{ $store.getters.totalPrice }}</span>
     <span class="buy-product">去计算({{ $store.getters.cartCount }})</span>
   </div>
 </template>
@@ -24,21 +24,21 @@ export default {
         this.$store.getters.cartList.find(item => item.checked === false) ===
         undefined
       );
-    },
-    totalPrice() {
-      const cartList = this.$store.getters.cartList;
-      return cartList
-        .filter(item => {
-          return item.checked;
-        })
-        .reduce((preValue, item) => {
-          var regex = /\d+\.?\d*/g;
-          var strnum = item.newPrice.match(regex);
-          var numitem = parseFloat(strnum).toFixed(2);
-          return preValue + item.count * numitem;
-        }, 0)
-        .toFixed(2);
     }
+    // totalPrice() {
+    //   const cartList = this.$store.getters.cartList;
+    //   return cartList
+    //     .filter(item => {
+    //       return item.checked;
+    //     })
+    //     .reduce((preValue, item) => {
+    //       var regex = /\d+\.?\d*/g;
+    //       var strnum = item.newPrice.match(regex);
+    //       var numitem = parseFloat(strnum).toFixed(2);
+    //       return preValue + item.count * numitem;
+    //     }, 0)
+    //     .toFixed(2);
+    // }
   },
   methods: {
     checkBtnClick() {

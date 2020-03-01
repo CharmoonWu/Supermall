@@ -42,6 +42,7 @@ export default {
     delbtn(iid) {
       // this.$store.commit("delCommodity", iid);
       this.$store.dispatch("delCommodity", iid);
+      this.$emit("sucdel");
     }
   },
   filters: {
