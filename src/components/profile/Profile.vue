@@ -9,7 +9,7 @@ export default {
 name: 'Profile',
 data () {
   return {
-    msg: '我是档案'
+    msg: '我是档案xixixi'
   }
 }
 }
