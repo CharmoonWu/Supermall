@@ -10,7 +10,8 @@ name: 'Profile',
 data () {
   return {
     msg: '我是档案还原',
-    aa:'fgfgf'
+    aa:'fgfgf',
+    textfz: 'hdkhajshdka'
   }
 }
 }
