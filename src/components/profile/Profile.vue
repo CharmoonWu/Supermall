@@ -9,7 +9,7 @@ export default {
 name: 'Profile',
 data () {
   return {
-    msg: '我是档案xixixi'
+    msg: '我是档案还原'
   }
 }
 }
